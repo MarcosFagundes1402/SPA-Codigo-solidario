@@ -24,7 +24,7 @@ export function homeTemplate() {
 
             <img
                 src="/images/backgorund1.png"
-                alt="Pessoas utilizando tecnologia em um projeto de inclusão digital"
+                alt="Alunos fazendo trabalho de faculdade juntos"
             >
         </section>
 
@@ -279,7 +279,11 @@ export function registerTemplate() {
 
                 </fieldset>
 
-                <p id="formMessage" class="form-message"></p>
+                <p
+                    id="formMessage"
+                    class="form-message"
+                    aria-live="polite"
+                ></p>
 
                 <button type="submit">
                     Enviar cadastro
