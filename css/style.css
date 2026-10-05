@@ -1,0 +1,940 @@
+:root {
+    /* CORES */
+    --azul-principal: #2563EB;
+    --azul-escuro: #1D4ED8;
+    --ciano: #06B6D4;
+    --verde: #22C55E;
+    --amarelo: #F59E0B;
+    --vermelho: #EF4444;
+    --cinza-claro: #F3F4F6;
+    --cinza-medio: #9CA3AF;
+    --grafite: #1F2937;
+    --branco: #FFFFFF;
+
+    /* TIPOGRAFIA */
+    --fonte-xs: 12px;
+    --fonte-sm: 14px;
+    --fonte-md: 16px;
+    --fonte-lg: 24px;
+    --fonte-xl: 32px;
+
+    /* ESPAÇAMENTOS */
+    --espaco-1: 4px;
+    --espaco-2: 8px;
+    --espaco-3: 16px;
+    --espaco-4: 24px;
+    --espaco-5: 32px;
+    --espaco-6: 48px;
+
+    /* OUTROS */
+    --raio: 10px;
+    --sombra: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+
+/* RESET */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+
+    background-color: #FFFFFF;
+    color: #1F2937;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* GRID PRINCIPAL */
+
+.grid-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 16px;
+}
+
+
+/* HEADER */
+
+header {
+    width: 100%;
+    background-color: #1F2937;
+
+    position: relative;
+    z-index: 10;
+}
+
+.menu-header {
+    width: 90%;
+    max-width: 1200px;
+    min-height: 90px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+
+    gap: 16px;
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+
+    border-radius: 50%;
+
+    justify-self: start;
+}
+
+.site-title {
+    color: #FFFFFF;
+
+    font-size: 22px;
+    margin: 0;
+
+    justify-self: center;
+}
+
+
+/* NAVEGAÇÃO */
+
+.header-nav {
+    display: flex;
+    align-items: center;
+
+    gap: 24px;
+
+    justify-self: end;
+}
+
+.header-nav button {
+    background: none;
+    border: none;
+
+    color: #FFFFFF;
+
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+
+    padding: 6px 0;
+
+    border-bottom: 2px solid transparent;
+
+    cursor: pointer;
+
+    transition:
+        color 0.2s,
+        border-color 0.2s,
+        transform 0.2s;
+}
+
+.header-nav button:hover {
+    color: #06B6D4;
+    border-bottom-color: #06B6D4;
+}
+
+.header-nav button:focus {
+    outline: 3px solid #06B6D4;
+    outline-offset: 4px;
+
+    border-radius: 4px;
+}
+
+.header-nav button:active {
+    transform: translateY(1px);
+}
+
+
+/* MENU HAMBURGUER */
+
+.menu-toggle {
+    display: none;
+
+    background: transparent;
+    border: none;
+
+    color: #FFFFFF;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    justify-self: end;
+}
+
+
+/* DROPDOWN */
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+
+    position: absolute;
+
+    top: 100%;
+    right: 0;
+
+    min-width: 180px;
+
+    padding: 8px;
+
+    background-color: #1F2937;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu a,
+.dropdown-menu button {
+    display: block;
+
+    width: 100%;
+
+    padding: 8px;
+
+    background: none;
+    border: none;
+
+    color: #FFFFFF;
+
+    text-align: left;
+
+    cursor: pointer;
+}
+
+
+/* MAIN */
+
+main {
+    width: 100%;
+    flex: 1;
+}
+
+section {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: 48px auto;
+}
+
+
+/* TIPOGRAFIA */
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 24px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+p {
+    line-height: 1.6;
+}
+
+
+/* HOME */
+
+.about-us-container {
+    width: 90%;
+    max-width: 1100px;
+}
+
+.about-us-container p {
+    margin-bottom: 16px;
+}
+
+.about-us-container img {
+    display: block;
+
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+
+    margin: 24px auto;
+
+    object-fit: contain;
+
+    border-radius: 10px;
+}
+
+.contact-area {
+    text-align: center;
+}
+
+.contact-area p {
+    margin-bottom: 8px;
+}
+
+.contact-area a {
+    color: #2563EB;
+
+    text-decoration: none;
+
+    font-weight: 600;
+}
+
+.contact-area a:hover {
+    text-decoration: underline;
+}
+
+
+/* PROJETOS */
+.projects {
+    display: grid;
+
+    grid-template-columns: repeat(12, 1fr);
+
+    gap: 16px;
+}
+
+.projects h1 {
+    grid-column: 1 / -1;
+
+    text-align: center;
+}
+
+.projects article {
+    grid-column: span 4;
+
+    background-color: #F3F4F6;
+
+    padding: 24px;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.06);
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
+}
+
+.projects article:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.projects article h2 {
+    color: #2563EB;
+}
+
+
+/* signup */
+
+.signup {
+    width: 90%;
+    max-width: 760px;
+
+    margin: 48px auto;
+}
+
+.signup h1 {
+    text-align: center;
+}
+
+.signup form {
+    background-color: #F3F4F6;
+
+    padding: 32px;
+
+    border-radius: 10px;
+}
+
+.signup fieldset {
+    border: 1px solid #9CA3AF;
+
+    padding: 24px;
+    margin-bottom: 24px;
+
+    border-radius: 10px;
+}
+
+.signup legend {
+    padding: 0 8px;
+
+    color: #2563EB;
+
+    font-weight: 700;
+}
+
+.field {
+    display: flex;
+
+    flex-direction: column;
+
+    margin-bottom: 16px;
+}
+
+.field label {
+    margin-bottom: 8px;
+
+    font-weight: 600;
+}
+
+.field input,
+.field select,
+.field textarea {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #9CA3AF;
+    border-radius: 6px;
+
+    background-color: #FFFFFF;
+    color: #1F2937;
+
+    font-family: inherit;
+    font-size: 16px;
+
+    transition:
+        border-color 0.2s,
+        box-shadow 0.2s;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+    outline: none;
+
+    border-color: #2563EB;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.18);
+}
+
+.field input:valid {
+    border-color: #22C55E;
+}
+
+.field input:invalid:not(:placeholder-shown) {
+    border-color: #EF4444;
+}
+
+.field textarea {
+    min-height: 120px;
+
+    resize: vertical;
+}
+
+
+/* BOTÃO CADASTRO */
+
+.signup button {
+    width: 100%;
+
+    padding: 13px;
+
+    border: none;
+    border-radius: 7px;
+
+    background-color: #2563EB;
+    color: #FFFFFF;
+
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s,
+        box-shadow 0.2s,
+        transform 0.2s;
+}
+
+.signup button:hover {
+    background-color: #1D4ED8;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.signup button:focus {
+    outline: 3px solid #06B6D4;
+    outline-offset: 3px;
+}
+
+.signup button:active {
+    transform: translateY(1px);
+
+    box-shadow: none;
+}
+
+.signup button:disabled {
+    background-color: #9CA3AF;
+
+    opacity: 0.7;
+
+    cursor: not-allowed;
+}
+
+
+/* BADGES */
+
+.badge {
+    display: inline-block;
+
+    padding: 6px 12px;
+    margin: 4px;
+
+    border-radius: 20px;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.badge-sucesso {
+    background-color: #22C55E;
+    color: #FFFFFF;
+}
+
+.badge-info {
+    background-color: #2563EB;
+    color: #FFFFFF;
+}
+
+.badge-alerta {
+    background-color: #F59E0B;
+    color: #1F2937;
+}
+
+
+/* ALERTAS */
+
+.alerta {
+    padding: 16px;
+
+    margin: 16px 0;
+
+    border-radius: 10px;
+
+    font-weight: 500;
+}
+
+.alerta-sucesso {
+    background-color: #DCFCE7;
+
+    border: 1px solid #22C55E;
+
+    color: #166534;
+}
+
+.alerta-erro {
+    background-color: #FEE2E2;
+
+    border: 1px solid #EF4444;
+
+    color: #991B1B;
+}
+
+.alerta-info {
+    background-color: #DBEAFE;
+
+    border: 1px solid #2563EB;
+
+    color: #1E3A8A;
+}
+
+
+/* TOAST */
+
+.toast {
+    width: fit-content;
+
+    padding: 16px 24px;
+
+    margin-top: 16px;
+
+    background-color: #1F2937;
+    color: #FFFFFF;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.12);
+
+    font-size: 14px;
+}
+
+
+/* FOOTER */
+
+footer {
+    width: 100%;
+
+    margin-top: auto;
+
+    background-color: #1F2937;
+    color: #FFFFFF;
+}
+
+.footer-container {
+    width: 90%;
+    max-width: 1100px;
+    min-height: 60px;
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 16px;
+
+    font-size: 14px;
+}
+
+.footer-container a {
+    color: #FFFFFF;
+
+    text-decoration: none;
+}
+
+.footer-container a:hover {
+    color: #06B6D4;
+}
+
+
+/* BREAKPOINT 1 - CELULAR PEQUENO */
+
+@media (max-width: 480px) {
+
+    .grid-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .menu-header {
+        width: 100%;
+
+        min-height: 70px;
+
+        padding: 10px 16px;
+
+        display: grid;
+
+        grid-template-columns: auto 1fr auto;
+
+        align-items: center;
+
+        gap: 10px;
+    }
+
+    .logo {
+        width: 58px;
+
+        grid-column: 1;
+    }
+
+    .site-title {
+        grid-column: 2;
+
+        justify-self: center;
+
+        font-size: 17px;
+
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: block;
+
+        grid-column: 3;
+
+        justify-self: end;
+    }
+
+    .header-nav {
+        display: none;
+
+        grid-column: 1 / -1;
+
+        width: 100%;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 8px;
+
+        padding: 12px 0;
+    }
+
+    .header-nav.active {
+        display: flex;
+    }
+
+    .header-nav button {
+        width: 100%;
+
+        padding: 10px;
+
+        text-align: center;
+    }
+
+    section {
+        width: 92%;
+
+        margin: 24px auto;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    h2 {
+        font-size: 21px;
+    }
+
+    .about-us-container {
+        width: 92%;
+    }
+
+    .about-us-container img {
+        width: 100%;
+
+        max-width: 100%;
+    }
+
+    .projects {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .projects article {
+        grid-column: 1 / -1;
+    }
+
+    .signup {
+        width: 94%;
+    }
+
+    .signup form {
+        padding: 16px;
+    }
+
+    .signup fieldset {
+        padding: 16px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+
+        padding: 16px;
+
+        text-align: center;
+    }
+}
+
+
+/* BREAKPOINT 2 - CELULAR MAIOR */
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+    .grid-container {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .menu-header {
+        width: 100%;
+
+        padding: 12px 20px;
+
+        display: grid;
+
+        grid-template-columns: auto 1fr auto;
+
+        align-items: center;
+
+        gap: 12px;
+    }
+
+    .logo {
+        width: 65px;
+
+        grid-column: 1;
+    }
+
+    .site-title {
+        grid-column: 2;
+
+        justify-self: center;
+
+        font-size: 19px;
+    }
+
+    .menu-toggle {
+        display: block;
+
+        grid-column: 3;
+
+        justify-self: end;
+    }
+
+    .header-nav {
+        display: none;
+
+        grid-column: 1 / -1;
+
+        width: 100%;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 10px;
+
+        padding: 12px 0;
+    }
+
+    .header-nav.active {
+        display: flex;
+    }
+
+    .header-nav button {
+        width: 100%;
+
+        padding: 10px;
+
+        text-align: center;
+    }
+
+    .about-us-container img {
+        display: block;
+        max-width: 700px;
+        width: 100%;
+        height: auto;
+        margin: 24px auto;
+        border-radius: 10px;
+    }
+
+    .projects {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .projects article {
+        grid-column: 1 / -1;
+    }
+
+    .footer-container {
+        flex-direction: column;
+
+        padding: 16px;
+
+        text-align: center;
+    }
+}
+
+
+/* BREAKPOINT 3 - TABLET */
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .grid-container {
+        grid-template-columns: repeat(8, 1fr);
+    }
+
+    .menu-header {
+        width: 94%;
+    }
+
+    .site-title {
+        font-size: 20px;
+    }
+
+    .header-nav {
+        gap: 16px;
+    }
+
+    .projects {
+        grid-template-columns: repeat(8, 1fr);
+    }
+
+    .projects article {
+        grid-column: span 4;
+    }
+}
+
+
+/* BREAKPOINT 4 - DESKTOP */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    .grid-container {
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    .projects article {
+        grid-column: span 4;
+    }
+}
+
+
+/* BREAKPOINT 5 - TELAS GRANDES */
+
+@media (min-width: 1200px) {
+
+    .grid-container {
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    .projects article {
+        grid-column: span 4;
+    }
+}
+
+
+.form-message {
+    margin: 16px 0;
+    font-weight: 600;
+}
+
+.form-message.error {
+    color: #EF4444;
+}
+
+.form-message.success {
+    color: #22C55E;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Código Solidário</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="menu-header">
+    
+            <img src="/images/logo.png" alt="Logo Código Solidário" class="logo">
+            
+            <h1 class="site-title">Código Solidário</h1>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+                ☰
+            </button>
+    
+            <nav class="header-nav" id="headerNav">
+                <button onclick="showHome()">
+                    Home
+                </button>
+    
+                <button onclick="showProjects()">
+                    Projetos
+                </button>
+    
+                <button onclick="showRegister()">
+                    Cadastre-se
+                </button>
+            </nav>
+    
+        </div>
+    </header>
+    <main id="container"></main>
+    <footer>
+
+        <div class="footer-container">
+
+            <p>Código Solidário</p>
+
+            <a href="mailto:contato@codigosolidario.org">
+                contato@codigosolidario.org
+            </a>
+
+            <p>© 2026 Código Solidário</p>
+
+        </div>
+
+    </footer>
+
+    <script type="module" src="/js/app.js"></script>
+</body>
+
+</html>
